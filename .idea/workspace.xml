@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d1bcfe2-fa82-44dd-accb-96e50b2916a0" name="Changes" comment="script added">
-      <change beforePath="$PROJECT_DIR$/stock2excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/greedier.py" afterDir="false" />
+    <list default="true" id="5d1bcfe2-fa82-44dd-accb-96e50b2916a0" name="Changes" comment="gui added">
+      <change afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dependencies.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/y2e.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/greedier.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,23 +129,30 @@
       <option name="project" value="LOCAL" />
       <updated>1744983099976</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="name updated">
+      <option name="closed" value="true" />
+      <created>1744983481288</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1744983481288</updated>
+    </task>
+    <task id="LOCAL-00006" summary="gui added">
+      <option name="closed" value="true" />
+      <created>1744983543854</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1744983543854</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="readme updated" />
     <MESSAGE value="script added" />
-    <option name="LAST_COMMIT_MESSAGE" value="script added" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="name updated" />
+    <MESSAGE value="gui added" />
+    <option name="LAST_COMMIT_MESSAGE" value="gui added" />
   </component>
 </project>

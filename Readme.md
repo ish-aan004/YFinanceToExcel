@@ -1,4 +1,4 @@
-# 📊 YFinance Data Downloader
+# YFinance to Excel
 
 In a _freedy_ world, access to data shouldn’t come with a price tag.
 
@@ -11,17 +11,17 @@ With this simple tool powered by the `yfinance` library, you can:
 
 ---
 
-## ✅ Who Is This For?
+## Who Is This For?
 
-- 📈 Investors who want raw stock data in Excel
-- 🧪 Students or researchers needing historical prices
-- 💡 Anyone tired of paywalls and just wants their data
+- Investors who want raw stock data in Excel
+-  Students or researchers needing historical prices
+-  Anyone tired of paywalls and just wants their data
 
 Even if you don’t know Python, this script can be run once and give you the `.xlsx` file you need.
 
 ---
 
-## 🛠 Features
+## Features
 
 - Supports all tickers from Yahoo Finance (including ASX tickers like `AUB.AX`)
 - Choose your time period (`1d`, `1mo`, `10y`, `max`, etc.)
@@ -30,11 +30,40 @@ Even if you don’t know Python, this script can be run once and give you the `.
 
 ---
 
-## 📦 Requirements
+## Requirements
 
-Make sure you have Python installed, then run:
+Make sure you have Python 3 installed, then install the required libraries by running:
 
 ```bash
+-- Windows
 pip install yfinance pandas openpyxl
 
-python download_stock_to_excel.py <TICKER> [PERIOD] [INTERVAL]
+
+-- MacOS
+pip3 install yfinance pandas openpyxl
+
+
+-- Or from the dependecies.txt file
+
+-- Windows
+pip install -r dependencies.txt
+
+--MacOS
+pip3 install -r dependencies.txt 
+```
+
+----
+
+## How to Run
+
+Once everything is installed, launch the GUI using:
+
+```bash
+# Windows
+python y2e.py
+
+# macOS
+python3 y2e.py
+```
+
+---
