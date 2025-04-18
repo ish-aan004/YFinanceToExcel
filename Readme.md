@@ -35,20 +35,20 @@ Even if you don’t know Python, this script can be run once and give you the `.
 Make sure you have Python 3 installed, then install the required libraries by running:
 
 ```bash
--- Windows
+#Windows
 pip install yfinance pandas openpyxl
 
 
--- MacOS
+#MacOS
 pip3 install yfinance pandas openpyxl
 
 
--- Or from the dependecies.txt file
+#Or from the dependecies.txt file
 
--- Windows
+#Windows
 pip install -r dependencies.txt
 
---MacOS
+#MacOS
 pip3 install -r dependencies.txt 
 ```
 
