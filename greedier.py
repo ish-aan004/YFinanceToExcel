@@ -1,22 +1,28 @@
-import sys
-import os
 import yfinance as yf
 import pandas as pd
+import os
 from datetime import datetime
 from pathlib import Path
+import tkinter as tk
+from tkinter import messagebox
 
 def get_downloads_folder():
-    # Cross-platform way to get Downloads folder (works for macOS/Linux/Windows)
     return str(Path.home() / "Downloads")
 
-def download_to_excel(ticker, period="1y", interval="1d"):
-    try:
-        print(f"📡 Fetching data for {ticker}...")
+def download_data():
+    ticker = ticker_entry.get().strip()
+    period = period_entry.get().strip() or "1y"
+    interval = interval_entry.get().strip() or "1d"
 
+    if not ticker:
+        messagebox.showerror("Error", "Please enter a stock ticker.")
+        return
+
+    try:
         data = yf.download(ticker, period=period, interval=interval)
 
         if data.empty:
-            print("⚠️ No data found. Please check your ticker or try a different period/interval.")
+            messagebox.showwarning("No Data", "No data found for the given inputs.")
             return
 
         filename = f"{ticker}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
@@ -25,20 +31,29 @@ def download_to_excel(ticker, period="1y", interval="1d"):
 
         data.to_excel(full_path)
 
-        print(f"✅ Success! Data saved to your Downloads folder as:\n{full_path}")
+        messagebox.showinfo("Success", f"Data saved to Downloads:\n{filename}")
 
     except Exception as e:
-        print("❌ Error:", e)
+        messagebox.showerror("Error", f"Something went wrong:\n{e}")
 
+# GUI Setup
+root = tk.Tk()
+root.title("📈 YFinance to Excel")
+root.geometry("350x250")
+root.resizable(False, False)
 
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python greedier.py <TICKER> [PERIOD] [INTERVAL]")
-        print("Example: python greedier.py AUB.AX 5y 1d")
-        sys.exit(1)
+tk.Label(root, text="Stock Ticker:").pack(pady=(20, 5))
+ticker_entry = tk.Entry(root, width=30)
+ticker_entry.pack()
 
-    ticker = sys.argv[1]
-    period = sys.argv[2] if len(sys.argv) >= 3 else "1y"
-    interval = sys.argv[3] if len(sys.argv) >= 4 else "1d"
+tk.Label(root, text="Period (default: 1y):").pack(pady=(10, 5))
+period_entry = tk.Entry(root, width=30)
+period_entry.pack()
 
-    download_to_excel(ticker, period, interval)
+tk.Label(root, text="Interval (default: 1d):").pack(pady=(10, 5))
+interval_entry = tk.Entry(root, width=30)
+interval_entry.pack()
+
+tk.Button(root, text="Download Excel File", command=download_data, bg="#4CAF50", fg="white").pack(pady=20)
+
+root.mainloop()
