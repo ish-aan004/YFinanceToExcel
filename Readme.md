@@ -1,6 +1,6 @@
 # 📊 YFinance Data Downloader
 
-In a rapidly *freedy* world, we need to be greedier.
+In a _freedy_ world, access to data shouldn’t come with a price tag.
 
 Yahoo Finance — once the go-to data source for everyone — now charges **$500 per year** just to download stock data... unless you know Python.
 
