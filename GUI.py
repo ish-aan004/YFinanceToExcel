@@ -20,7 +20,7 @@ def run_app():
             messagebox.showerror("Error", msg)
 
     def open_contact_link(event):
-        webbrowser.open_new("https://www.linkedin.com/in/tejastagra/")  # 🔗 Replace with your own
+        webbrowser.open_new("https://www.linkedin.com/in/ishaankapoor04/")
 
     # --- Root window config ---
     root = tk.Tk()
