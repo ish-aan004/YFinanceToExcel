@@ -1,38 +1,51 @@
-# YFinance to Excel
+# 📊 YFinance to Excel
 
-In a _freedy_ world, access to data shouldn’t come with a price tag.
+In a _freedy_ world, access to data shouldn’t come with a price tag.  
+This tool is for everyone who just wants their stock prices — **no paywalls, no subscriptions, no Python degree required.**
 
-Yahoo Finance — once the go-to data source for everyone — now charges **$500 per year** just to download stock data... unless you know Python.
+Yahoo Finance used to let you download data for free. Now?  
+**$500/year** for an export button 😩
 
-With this simple tool powered by the `yfinance` library, you can:
-- Fetch stock data for **free**
-- Export it into a clean **Excel file**
-- Use it with no subscription, no limits, no hassle
-
----
-
-## Who Is This For?
-
-- Investors who want raw stock data in Excel
--  Students or researchers needing historical prices
--  Anyone tired of paywalls and just wants their data
-
-Even if you don’t know Python, this script can be run once and give you the `.xlsx` file you need.
+Luckily, this app gives that power back — for free.
 
 ---
 
-## Features
+## 🧠 What Does This App Do?
 
-- Supports all tickers from Yahoo Finance (including ASX tickers like `AUB.AX`)
-- Choose your time period (`1d`, `1mo`, `10y`, `max`, etc.)
-- Choose your interval (`1d`, `1wk`, `1mo`, etc.)
-- Outputs a ready-to-use Excel file
+With this tool, you can:
+
+- Fetch stock data from Yahoo Finance
+- Export it directly into a clean `.xlsx` Excel file
+- Choose your own time period and interval
+- Do it all from a super simple interface — no code, no setup drama
 
 ---
 
-## Requirements
+## 🧑‍🎓 Who’s This For?
 
-Make sure you have Python 3 installed, then install the required libraries by running:
+- **Students & researchers** pulling data for assignments and reports  
+- **Retail investors** tracking historical stock prices  
+- Anyone who’s typed “AAPL historical prices Excel” into Google and hit a paywall
+
+No Python skills? No problem.  
+If you can double-click, you can use this.
+
+---
+
+## ✨ Features
+
+- ✅ Works for **all tickers on Yahoo Finance** (ASX, NSE, NYSE, LSE, etc.)
+- ✅ Custom time ranges: `1d`, `1mo`, `10y`, `max`, you name it
+- ✅ Choose intervals like `1d`, `1wk`, `1mo`, etc.
+- ✅ Output is a ready-to-use Excel spreadsheet
+- ✅ Totally free, no account required
+
+---
+
+## 💻 Requirements
+
+You’ll need **Python 3** installed. If you don’t have it, grab it from [python.org](https://www.python.org/downloads/).  
+Once that’s done, install the required libraries through Terminal:
 
 ```bash
 #Windows
