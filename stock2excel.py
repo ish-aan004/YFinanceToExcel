@@ -1,11 +1,17 @@
 import sys
+import os
 import yfinance as yf
 import pandas as pd
 from datetime import datetime
+from pathlib import Path
+
+def get_downloads_folder():
+    # Cross-platform way to get Downloads folder (works for macOS/Linux/Windows)
+    return str(Path.home() / "Downloads")
 
 def download_to_excel(ticker, period="1y", interval="1d"):
     try:
-        print(f"Fetching data for {ticker}...")
+        print(f"📡 Fetching data for {ticker}...")
 
         data = yf.download(ticker, period=period, interval=interval)
 
@@ -14,18 +20,21 @@ def download_to_excel(ticker, period="1y", interval="1d"):
             return
 
         filename = f"{ticker}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
-        data.to_excel(filename)
+        downloads_path = get_downloads_folder()
+        full_path = os.path.join(downloads_path, filename)
 
-        print(f"✅ Data downloaded successfully and saved as '{filename}'")
+        data.to_excel(full_path)
+
+        print(f"✅ Success! Data saved to your Downloads folder as:\n{full_path}")
 
     except Exception as e:
-        print("❌ Something went wrong:", e)
+        print("❌ Error:", e)
 
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python download_stock_to_excel.py <TICKER> [PERIOD] [INTERVAL]")
-        print("Example: python download_stock_to_excel.py AUB.AX 5y 1d")
+        print("Usage: python greedier.py <TICKER> [PERIOD] [INTERVAL]")
+        print("Example: python greedier.py AUB.AX 5y 1d")
         sys.exit(1)
 
     ticker = sys.argv[1]
