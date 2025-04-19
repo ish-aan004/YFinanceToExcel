@@ -79,4 +79,10 @@ python y2e.py
 python3 y2e.py
 ```
 
+If you don’t want to mess with Python:
+- Download the ZIP file from the Releases page
+- Extract the ZIP
+- Open the folder
+- Double-click y2e.exe to launch the app 🚀 
+
 ---
