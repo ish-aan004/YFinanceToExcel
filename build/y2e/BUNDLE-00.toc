@@ -1,0 +1,3 @@
+([('y2e',
+   '/Users/ishaan/PycharmProjects/YFinanceToExcel/dist/y2e',
+   'EXECUTABLE')],)
